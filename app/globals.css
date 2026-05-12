@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* Sticky header offset */
+html {
+  scroll-padding-top: 96px;
+}
+
+/* Form base */
+input, select, textarea, button {
+  font: inherit;
+}
