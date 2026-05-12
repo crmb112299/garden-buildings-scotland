@@ -16,6 +16,7 @@ export default function HomePage() {
     <>
       <Hero
         source="home"
+        badgeTagline="Garden Buildings"
         headline="Our Garden Buildings Sale Is Now On"
         subheadline="Save Up To 50% Off Garden Buildings"
       />

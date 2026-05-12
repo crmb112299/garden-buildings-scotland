@@ -45,8 +45,8 @@ export default function Hero({
               <div className="text-center text-white">
                 {badgeTagline ? (
                   <>
-                    {/* Green sale badge — solid */}
-                    <div className="bg-brand-600 rounded-md px-6 py-6 md:py-7 border border-brand-500 shadow-lg mx-auto max-w-sm">
+                    {/* Green sale badge — solid, full width of left column */}
+                    <div className="bg-brand-600 rounded-md px-6 py-6 md:py-8 border border-brand-500 shadow-lg w-full">
                       <div className="inline-block bg-white/25 backdrop-blur px-3 py-0.5 rounded-full text-[11px] font-extrabold tracking-[0.25em]">
                         SALE NOW ON
                       </div>
@@ -73,7 +73,7 @@ export default function Hero({
 
                 <a
                   href={SITE.phoneHref}
-                  className="block mt-4 text-3xl md:text-4xl font-black text-white hover:text-brand-100 leading-none"
+                  className="block mt-4 text-2xl md:text-3xl font-black text-white hover:text-brand-100 leading-none tracking-wide"
                   aria-label={`Call ${SITE.phone}`}
                 >
                   {SITE.phone}
