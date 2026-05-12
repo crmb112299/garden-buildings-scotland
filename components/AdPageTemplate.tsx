@@ -22,7 +22,6 @@ type Props = {
 
 export default function AdPageTemplate({ product, town }: Props) {
   const place = locationPhrase(town);
-  const headline = `Up To 50% Off ${product.plural} ${place}`;
   const subheadline = `Free delivery & installation ${place}.`;
   const source = `${product.key}-${town.slug}`;
   const interest = PRODUCT_TO_INTEREST[product.key];
@@ -32,7 +31,7 @@ export default function AdPageTemplate({ product, town }: Props) {
       <Hero
         source={source}
         defaultInterest={interest}
-        headline={headline}
+        badgeTagline={product.plural}
         subheadline={subheadline}
         backgroundImage={product.image}
         saleBanner={`SALE NOW ON. Up To 50% Off ${product.plural} ${place}.`}

@@ -18,7 +18,7 @@ export default function ShedsPage() {
       <Hero
         source="page-sheds"
         defaultInterest="Garden Shed"
-        headline="Up To 50% Off Garden Sheds"
+        badgeTagline="Garden Sheds"
         subheadline="Free delivery & installation right across Scotland."
         backgroundImage={product.image}
       />
