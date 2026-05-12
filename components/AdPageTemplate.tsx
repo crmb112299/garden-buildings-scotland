@@ -36,6 +36,7 @@ export default function AdPageTemplate({ product, town }: Props) {
         subheadline={subheadline}
         bodyCopy={product.positioning}
         backgroundImage={product.image}
+        badgeTagline={product.plural}
         saleBanner={`SALE NOW ON. Up To 50% Off ${product.plural} ${place}`}
       />
 

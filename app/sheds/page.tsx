@@ -22,6 +22,7 @@ export default function ShedsPage() {
         subheadline="Save Up To 50% Off Garden Sheds"
         bodyCopy={product.positioning}
         backgroundImage={product.image}
+        badgeTagline="Garden Sheds"
       />
 
       <TrustBar />

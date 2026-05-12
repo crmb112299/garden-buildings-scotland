@@ -22,6 +22,7 @@ export default function GardenRoomsPage() {
         subheadline="Save Up To 50% Off Garden Rooms"
         bodyCopy={product.positioning}
         backgroundImage={product.image}
+        badgeTagline="Garden Rooms"
       />
 
       <TrustBar />
