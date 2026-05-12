@@ -18,11 +18,9 @@ export default function ShedsPage() {
       <Hero
         source="page-sheds"
         defaultInterest="Garden Shed"
-        headline="Garden Sheds Built To Last"
-        subheadline="Save Up To 50% Off Garden Sheds"
-        bodyCopy={product.positioning}
+        headline="Up To 50% Off Garden Sheds"
+        subheadline="Free delivery & installation right across Scotland."
         backgroundImage={product.image}
-        badgeTagline="Garden Sheds"
       />
 
       <TrustBar />

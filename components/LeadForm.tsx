@@ -80,15 +80,15 @@ export default function LeadForm({
   }
 
   const panelClass = isDark
-    ? "bg-ink-900/80 backdrop-blur rounded-xl p-6 md:p-7 border border-white/10 shadow-2xl"
-    : "bg-white rounded-xl shadow-lg p-6 md:p-8 border border-slate-200";
-  const headingClass = isDark ? "text-2xl font-bold text-white" : "text-2xl font-bold text-ink-900";
-  const subheadingClass = isDark ? "text-sm text-slate-300 mt-1" : "text-sm text-ink-500 mt-1";
+    ? "bg-ink-900/80 backdrop-blur rounded-xl p-5 md:p-6 border border-white/10 shadow-2xl"
+    : "bg-white rounded-xl shadow-lg p-6 md:p-7 border border-slate-200";
+  const headingClass = isDark ? "text-lg md:text-xl font-bold text-white" : "text-2xl font-bold text-ink-900";
+  const subheadingClass = isDark ? "text-sm text-slate-300 mt-0.5" : "text-sm text-ink-500 mt-1";
   const labelClass = isDark
-    ? "block text-sm font-semibold text-white mb-1.5"
-    : "block text-sm font-semibold text-ink-900 mb-1.5";
+    ? "block text-xs font-semibold text-white mb-1"
+    : "block text-xs font-semibold text-ink-900 mb-1";
   const inputClass =
-    "w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-base text-ink-900 placeholder:text-ink-500/70 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500/30";
+    "w-full rounded-md border border-slate-300 bg-white px-3.5 py-2.5 text-base text-ink-900 placeholder:text-ink-500/70 focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500/30";
   const footnoteClass = isDark
     ? "text-xs text-slate-300 text-center pt-1"
     : "text-xs text-ink-500 text-center pt-1";
@@ -116,7 +116,7 @@ export default function LeadForm({
       <div className={headingClass}>{heading}</div>
       {subheading && <p className={subheadingClass}>{subheading}</p>}
 
-      <div className="mt-4 space-y-3">
+      <div className="mt-3 space-y-2.5">
         <label className="block">
           <span className={labelClass}>Interested In</span>
           <select
@@ -154,7 +154,7 @@ export default function LeadForm({
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="w-full bg-brand-600 hover:bg-brand-700 disabled:bg-brand-600/70 text-white font-bold text-lg py-3.5 rounded-md transition-colors mt-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 disabled:bg-brand-600/70 text-white font-bold text-base md:text-lg py-3 rounded-md transition-colors mt-1"
         >
           {status === "submitting" ? "Sending…" : "Continue"}
         </button>

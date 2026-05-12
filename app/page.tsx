@@ -16,9 +16,8 @@ export default function HomePage() {
     <>
       <Hero
         source="home"
-        headline="Garden Buildings Scotland. Sheds, Garden Rooms and More"
-        subheadline="Save Up To 50% Off Garden Buildings"
-        bodyCopy="Garden sheds, garden rooms, summerhouses, greenhouses and playhouses. Supplied and installed right across Scotland. Built to last, priced to beat the competition."
+        headline="Up To 50% Off Garden Buildings"
+        subheadline="Free delivery & installation right across Scotland."
       />
 
       <TrustBar />

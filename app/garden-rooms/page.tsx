@@ -18,11 +18,9 @@ export default function GardenRoomsPage() {
       <Hero
         source="page-garden-rooms"
         defaultInterest="Garden Room"
-        headline="Garden Rooms & Garden Offices"
-        subheadline="Save Up To 50% Off Garden Rooms"
-        bodyCopy={product.positioning}
+        headline="Up To 50% Off Garden Rooms"
+        subheadline="Free delivery & installation right across Scotland."
         backgroundImage={product.image}
-        badgeTagline="Garden Rooms"
       />
 
       <TrustBar />
