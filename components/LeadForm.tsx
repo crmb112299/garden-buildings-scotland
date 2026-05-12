@@ -12,7 +12,7 @@ type Props = {
   heading?: string;
   /** Optional sub-heading shown above the form */
   subheading?: string;
-  /** Visual theme. "light" = white card (default). "dark" = dark semi-transparent panel for use on hero photos. */
+  /** Visual theme. "light" = white card (default). "dark" = embedded transparent (no outer panel), 2-col grid layout. */
   theme?: "light" | "dark";
 };
 
@@ -79,10 +79,12 @@ export default function LeadForm({
     }
   }
 
-  const panelClass = isDark
-    ? "bg-ink-900/55 backdrop-blur-md rounded-xl p-5 md:p-6 border border-white/10 shadow-2xl"
-    : "bg-white rounded-xl shadow-lg p-6 md:p-7 border border-slate-200";
-  const headingClass = isDark ? "text-lg md:text-xl font-bold text-white" : "text-2xl font-bold text-ink-900";
+  // Dark = embedded in hero card, no outer panel styling, 2-col grid for inputs.
+  // Light = standalone white card with single column.
+  const panelClass = isDark ? "" : "bg-white rounded-xl shadow-lg p-6 md:p-7 border border-slate-200";
+  const headingClass = isDark
+    ? "text-xl md:text-2xl font-bold text-white"
+    : "text-2xl font-bold text-ink-900";
   const subheadingClass = isDark ? "text-sm text-slate-300 mt-0.5" : "text-sm text-ink-500 mt-1";
   const labelClass = isDark
     ? "block text-xs font-semibold text-white mb-1"
@@ -95,14 +97,17 @@ export default function LeadForm({
 
   if (status === "ok") {
     return (
-      <div className={panelClass}>
+      <div className={panelClass || "text-white"}>
         <div className={isDark ? "text-2xl font-bold text-brand-100" : "text-2xl font-bold text-brand-700"}>
           Thanks, we&apos;ve got your details.
         </div>
         <p className={isDark ? "mt-2 text-slate-200" : "mt-2 text-ink-700"}>
-          One of the team will be in touch shortly with your free quote. If you&apos;d like to speak to
-          us right now, call{" "}
-          <a href={SITE.phoneHref} className={isDark ? "text-white font-semibold underline" : "text-brand-700 font-semibold"}>
+          One of the team will be in touch shortly with your free quote. If you&apos;d like to speak
+          to us right now, call{" "}
+          <a
+            href={SITE.phoneHref}
+            className={isDark ? "text-white font-semibold underline" : "text-brand-700 font-semibold"}
+          >
             {SITE.phone}
           </a>
           .
@@ -111,13 +116,18 @@ export default function LeadForm({
     );
   }
 
+  const fieldsWrapper = isDark
+    ? "mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3"
+    : "mt-3 space-y-2.5";
+
   return (
     <form onSubmit={handleSubmit} className={panelClass} aria-busy={status === "submitting"}>
       <div className={headingClass}>{heading}</div>
       {subheading && <p className={subheadingClass}>{subheading}</p>}
 
-      <div className="mt-3 space-y-2.5">
-        <label className="block">
+      <div className={fieldsWrapper}>
+        {/* Interested In — full width */}
+        <label className={isDark ? "block sm:col-span-2" : "block"}>
           <span className={labelClass}>Interested In</span>
           <select
             name="interest"
@@ -154,15 +164,20 @@ export default function LeadForm({
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="w-full bg-brand-600 hover:bg-brand-700 disabled:bg-brand-600/70 text-white font-bold text-base md:text-lg py-3 rounded-md transition-colors mt-1"
+          className={`bg-brand-600 hover:bg-brand-700 disabled:bg-brand-600/70 text-white font-bold text-base md:text-lg py-3 rounded-md transition-colors mt-1 ${isDark ? "sm:col-span-2 w-full" : "w-full"}`}
         >
           {status === "submitting" ? "Sending…" : "Continue"}
         </button>
 
-        <p className={footnoteClass}>No hard sell. No obligation. Just a great price.</p>
+        <p className={`${footnoteClass} ${isDark ? "sm:col-span-2" : ""}`}>
+          No hard sell. No obligation. Just a great price.
+        </p>
 
         {status === "error" && (
-          <p className="text-sm text-red-300 text-center" role="alert">
+          <p
+            className={`text-sm text-center ${isDark ? "text-red-300 sm:col-span-2" : "text-red-600"}`}
+            role="alert"
+          >
             {errorMessage}
           </p>
         )}
