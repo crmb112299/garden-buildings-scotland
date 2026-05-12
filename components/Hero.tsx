@@ -55,7 +55,7 @@ export default function Hero({
             </div>
 
             {/* Dark info panel */}
-            <div className="bg-ink-900/80 backdrop-blur rounded-xl p-5 md:p-6 border border-white/10 shadow-2xl flex-1 flex flex-col">
+            <div className="bg-ink-900/55 backdrop-blur-md rounded-xl p-5 md:p-6 border border-white/10 shadow-2xl flex-1 flex flex-col">
               <h1 className="text-2xl md:text-3xl font-extrabold leading-tight">{headline}</h1>
               <p className="mt-2 text-lg md:text-xl text-slate-200 font-semibold">{subheadline}</p>
               {bodyCopy && <p className="mt-1.5 text-sm text-slate-300">{bodyCopy}</p>}

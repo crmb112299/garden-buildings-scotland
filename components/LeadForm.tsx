@@ -80,7 +80,7 @@ export default function LeadForm({
   }
 
   const panelClass = isDark
-    ? "bg-ink-900/80 backdrop-blur rounded-xl p-5 md:p-6 border border-white/10 shadow-2xl"
+    ? "bg-ink-900/55 backdrop-blur-md rounded-xl p-5 md:p-6 border border-white/10 shadow-2xl"
     : "bg-white rounded-xl shadow-lg p-6 md:p-7 border border-slate-200";
   const headingClass = isDark ? "text-lg md:text-xl font-bold text-white" : "text-2xl font-bold text-ink-900";
   const subheadingClass = isDark ? "text-sm text-slate-300 mt-0.5" : "text-sm text-ink-500 mt-1";
