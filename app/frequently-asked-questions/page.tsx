@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import CTASection from "@/components/CTASection";
+import FAQAccordion, { type FAQItem } from "@/components/FAQAccordion";
 
 export const metadata = {
   title: "FAQ | Garden Buildings Scotland",
@@ -8,7 +9,7 @@ export const metadata = {
     "Frequently asked questions about garden sheds, garden rooms, summerhouses, greenhouses and playhouses from Garden Buildings Scotland. Delivery, installation, guarantees, lead times."
 };
 
-const FAQS = [
+const FAQS: FAQItem[] = [
   {
     q: "Do you deliver across all of Scotland?",
     a: "Yes. We cover Edinburgh, Glasgow, Dundee, Stirling, Perth, Fife, Lanarkshire, Ayrshire and every town in between. Free delivery is included as standard."
@@ -50,20 +51,16 @@ export default function FAQPage() {
         source="page-faq"
         headline="Frequently Asked Questions"
         subheadline="Everything you need to know before getting a quote"
-        bodyCopy="Quick answers about delivery, installation, lead times, guarantees and pricing. If your question isn't here, just call or use the form. We'll come straight back."
+        bodyCopy="Quick answers about delivery, installation, lead times, guarantees and pricing."
       />
       <TrustBar />
 
       <section className="py-16 bg-white">
         <div className="max-w-container mx-auto px-4 max-w-3xl">
-          <dl className="space-y-6">
-            {FAQS.map((item) => (
-              <div key={item.q} className="border-b border-slate-200 pb-6">
-                <dt className="text-lg font-bold text-ink-900">{item.q}</dt>
-                <dd className="mt-2 text-ink-700 leading-relaxed">{item.a}</dd>
-              </div>
-            ))}
-          </dl>
+          <FAQAccordion items={FAQS} />
+          <p className="mt-8 text-ink-700 text-center">
+            Question not here? Just call or use the form, we&apos;ll come straight back.
+          </p>
         </div>
       </section>
 

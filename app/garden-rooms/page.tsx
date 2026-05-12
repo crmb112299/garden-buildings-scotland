@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import WhyChoose from "@/components/WhyChoose";
 import CTASection from "@/components/CTASection";
+import Gallery from "@/components/Gallery";
 import LeadForm from "@/components/LeadForm";
 import { PRODUCTS } from "@/lib/products";
 
@@ -21,10 +22,11 @@ export default function GardenRoomsPage() {
         badgeTagline="Garden Rooms"
         headline="Our Garden Rooms Sale Is Now On"
         subheadline="Save Up To 50% Off Garden Rooms"
-        backgroundImage={product.image}
+        variant="product"
+        formHeading="Get Your Free Garden Room Quote"
       />
 
-      <TrustBar />
+      <TrustBar dark={false} />
 
       <section className="py-16 bg-white">
         <div className="max-w-container mx-auto px-4 grid lg:grid-cols-5 gap-10">
@@ -77,6 +79,12 @@ export default function GardenRoomsPage() {
           </aside>
         </div>
       </section>
+
+      <Gallery
+        images={product.gallery}
+        heading="A Few Recent Garden Rooms"
+        subheading="A snapshot of our garden room and office builds across Scotland."
+      />
 
       <WhyChoose />
       <CTASection subheading="Save Up To 50% Off Garden Rooms" />

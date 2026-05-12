@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import WhyChoose from "@/components/WhyChoose";
 import CTASection from "@/components/CTASection";
+import Gallery from "@/components/Gallery";
 import LeadForm from "@/components/LeadForm";
 import { type Product } from "@/lib/products";
 import { type Town, locationPhrase } from "@/lib/towns";
@@ -35,11 +36,12 @@ export default function AdPageTemplate({ product, town }: Props) {
         badgeTagline={product.plural}
         headline={headline}
         subheadline={subheadline}
-        backgroundImage={product.image}
         saleBanner={`SALE NOW ON. Up To 50% Off ${product.plural} ${place}.`}
+        variant="product"
+        formHeading={`Get Your Free ${product.singular} Quote`}
       />
 
-      <TrustBar />
+      <TrustBar dark={false} />
 
       <section className="py-16 bg-white">
         <div className="max-w-container mx-auto px-4 grid lg:grid-cols-5 gap-10">
@@ -94,6 +96,12 @@ export default function AdPageTemplate({ product, town }: Props) {
           </aside>
         </div>
       </section>
+
+      <Gallery
+        images={product.gallery}
+        heading={`Recent ${product.plural} ${place}`}
+        subheading="A snapshot of recent builds across Scotland."
+      />
 
       <WhyChoose />
 

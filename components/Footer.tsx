@@ -4,41 +4,65 @@ import { SITE } from "@/lib/site";
 export default function Footer() {
   return (
     <footer className="bg-ink-900 text-slate-200 mt-20">
-      <div className="max-w-container mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-container mx-auto px-4 py-14 grid grid-cols-2 md:grid-cols-4 gap-8">
         <div className="col-span-2">
-          <div className="font-extrabold text-xl text-white">
-            Garden Buildings <span className="text-brand-500">Scotland</span>
-          </div>
-          <p className="mt-3 text-sm text-slate-400 max-w-sm">
+          <Link href="/" className="inline-flex items-center gap-3">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-600 text-white" aria-hidden>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 11.5 12 4l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-9.5Z" />
+              </svg>
+            </span>
+            <span className="font-extrabold text-lg text-white">
+              Garden Buildings <span className="text-brand-500">Scotland</span>
+            </span>
+          </Link>
+          <p className="mt-4 text-sm text-slate-400 max-w-sm leading-relaxed">
             Garden sheds, garden rooms, summerhouses, greenhouses and playhouses, supplied and
-            installed across Scotland.
+            installed across Scotland. Family-friendly team, honest prices, and no hard sell.
           </p>
-          <p className="mt-4 text-sm">
-            <a href={SITE.phoneHref} className="font-semibold hover:text-brand-100">
+
+          <div className="mt-5 space-y-1.5 text-sm">
+            <a href={SITE.phoneHref} className="flex items-center gap-2 font-semibold text-white hover:text-brand-100">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.58l2.2-2.21a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1Z" />
+              </svg>
               {SITE.phone}
             </a>
-            <br />
-            <a href={`mailto:${SITE.email}`} className="hover:text-brand-100">
+            <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 hover:text-brand-100">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
               {SITE.email}
             </a>
-            <br />
-            <span className="text-slate-400">{SITE.addressLine}</span>
-          </p>
+            <div className="flex items-start gap-2 text-slate-400">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="mt-0.5">
+                <path d="M12 22s-7-5.5-7-12a7 7 0 1 1 14 0c0 6.5-7 12-7 12Z" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+              {SITE.addressLine}
+            </div>
+          </div>
         </div>
 
         <div>
-          <div className="font-semibold text-white mb-3">Get A Quote</div>
+          <div className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Get A Quote</div>
           <ul className="space-y-2 text-sm">
             <li><Link href="/online-quote" className="hover:text-brand-100">Online Quote</Link></li>
             <li><Link href="/contact-us" className="hover:text-brand-100">Contact Us</Link></li>
+            <li><Link href="/customer-reviews" className="hover:text-brand-100">Reviews</Link></li>
+            <li><Link href="/frequently-asked-questions" className="hover:text-brand-100">FAQ</Link></li>
           </ul>
         </div>
 
         <div>
-          <div className="font-semibold text-white mb-3">Products</div>
+          <div className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Products</div>
           <ul className="space-y-2 text-sm">
             <li><Link href="/sheds" className="hover:text-brand-100">Garden Sheds</Link></li>
             <li><Link href="/garden-rooms" className="hover:text-brand-100">Garden Rooms</Link></li>
+            <li><Link href="/online-quote" className="hover:text-brand-100">Summerhouses</Link></li>
+            <li><Link href="/online-quote" className="hover:text-brand-100">Greenhouses</Link></li>
+            <li><Link href="/online-quote" className="hover:text-brand-100">Playhouses</Link></li>
           </ul>
         </div>
 

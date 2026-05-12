@@ -21,13 +21,11 @@ export default function HomePage() {
         subheadline="Save Up To 50% Off Garden Buildings"
       />
 
-      <TrustBar />
+      <TrustBar dark={false} />
 
       <WhyChoose />
 
       <ProductCards />
-
-      <TrustBar dark={false} />
 
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-container mx-auto px-4 max-w-3xl">

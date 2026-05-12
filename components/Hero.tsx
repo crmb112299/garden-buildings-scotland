@@ -10,6 +10,13 @@ type Props = {
   defaultInterest?: Interest;
   source: string;
   backgroundImage?: string;
+  /**
+   * "home"    = photo background, transparent outer card containing badge + form (default)
+   * "product" = solid dark hero, no outer card, white card form on right (Weatherseal product-page style)
+   */
+  variant?: "home" | "product";
+  /** Form heading override (e.g. "Get Your Free Shed Quote"). */
+  formHeading?: string;
 };
 
 const DEFAULT_BG = "/images/garden-rooms/1.jpg";
@@ -22,13 +29,59 @@ export default function Hero({
   bodyCopy = "Get An Unbeatable Quote Now",
   defaultInterest,
   source,
-  backgroundImage = DEFAULT_BG
+  backgroundImage = DEFAULT_BG,
+  variant = "home",
+  formHeading
 }: Props) {
-  const bgStyle = {
+  const isProduct = variant === "product";
+
+  const photoBgStyle = {
     backgroundImage: `linear-gradient(rgba(15,23,42,0.4), rgba(15,23,42,0.55)), url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center"
   };
+
+  const LeftContent = (
+    <div className="text-center text-white">
+      {badgeTagline ? (
+        <>
+          <div className="bg-brand-600 rounded-md px-6 py-6 md:py-8 border border-brand-500 shadow-lg w-full">
+            <div className="inline-block bg-white/25 backdrop-blur px-3 py-0.5 rounded-full text-[11px] font-extrabold tracking-[0.25em]">
+              SALE NOW ON
+            </div>
+            <div className="mt-2 text-xs font-bold uppercase tracking-[0.2em]">Up To</div>
+            <div className="text-6xl md:text-7xl font-black leading-none my-1">50%</div>
+            <div className="text-xs font-bold uppercase tracking-[0.2em]">Off</div>
+            <div className="mt-2 text-[11px] md:text-xs uppercase tracking-[0.2em] font-extrabold">
+              {badgeTagline}
+            </div>
+          </div>
+
+          <h1 className="mt-6 text-xl md:text-2xl font-extrabold leading-tight">{headline}</h1>
+        </>
+      ) : (
+        <h1 className="text-3xl md:text-5xl font-black leading-tight">{headline}</h1>
+      )}
+
+      <p className="mt-2 text-base md:text-lg font-semibold text-slate-100">{subheadline}</p>
+      {bodyCopy && <p className="mt-2 text-sm md:text-base text-slate-200">{bodyCopy}</p>}
+
+      <a
+        href={SITE.phoneHref}
+        className="block mt-4 text-2xl md:text-3xl font-black text-white hover:text-brand-100 leading-none tracking-wide"
+        aria-label={`Call ${SITE.phone}`}
+      >
+        {SITE.phone}
+      </a>
+
+      <a
+        href="#quote"
+        className="mt-5 inline-block w-full max-w-sm text-center bg-brand-600 hover:bg-brand-700 text-white font-bold px-6 py-3.5 rounded-md"
+      >
+        Get A FREE Quote
+      </a>
+    </div>
+  );
 
   return (
     <>
@@ -36,63 +89,35 @@ export default function Hero({
         {saleBanner}
       </div>
 
-      <section className="bg-ink-900 text-white" style={bgStyle}>
+      <section
+        className={isProduct ? "bg-ink-900 text-white" : "bg-ink-900 text-white"}
+        style={isProduct ? undefined : photoBgStyle}
+      >
         <div className="max-w-container mx-auto px-4 py-10 md:py-14 lg:py-16">
-          {/* ONE big transparent card wrapping both columns */}
-          <div className="bg-ink-900/55 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl p-6 md:p-8 lg:p-10">
+          {isProduct ? (
+            // Product variant: no outer transparent container, white form card on right
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
-              {/* LEFT: badge + info (centered) */}
-              <div className="text-center text-white">
-                {badgeTagline ? (
-                  <>
-                    {/* Green sale badge — solid, full width of left column */}
-                    <div className="bg-brand-600 rounded-md px-6 py-6 md:py-8 border border-brand-500 shadow-lg w-full">
-                      <div className="inline-block bg-white/25 backdrop-blur px-3 py-0.5 rounded-full text-[11px] font-extrabold tracking-[0.25em]">
-                        SALE NOW ON
-                      </div>
-                      <div className="mt-2 text-xs font-bold uppercase tracking-[0.2em]">Up To</div>
-                      <div className="text-6xl md:text-7xl font-black leading-none my-1">50%</div>
-                      <div className="text-xs font-bold uppercase tracking-[0.2em]">Off</div>
-                      <div className="mt-2 text-[11px] md:text-xs uppercase tracking-[0.2em] font-extrabold">
-                        {badgeTagline}
-                      </div>
-                    </div>
-
-                    <h1 className="mt-6 text-xl md:text-2xl font-extrabold leading-tight">{headline}</h1>
-                  </>
-                ) : (
-                  <h1 className="text-3xl md:text-5xl font-black leading-tight">{headline}</h1>
-                )}
-
-                <p className="mt-2 text-base md:text-lg font-semibold text-slate-100">
-                  {subheadline}
-                </p>
-                {bodyCopy && (
-                  <p className="mt-2 text-sm md:text-base text-slate-200">{bodyCopy}</p>
-                )}
-
-                <a
-                  href={SITE.phoneHref}
-                  className="block mt-4 text-2xl md:text-3xl font-black text-white hover:text-brand-100 leading-none tracking-wide"
-                  aria-label={`Call ${SITE.phone}`}
-                >
-                  {SITE.phone}
-                </a>
-
-                <a
-                  href="#quote"
-                  className="mt-5 inline-block w-full max-w-sm text-center bg-brand-600 hover:bg-brand-700 text-white font-bold px-6 py-3.5 rounded-md"
-                >
-                  Get A FREE Quote
-                </a>
-              </div>
-
-              {/* RIGHT: form */}
+              {LeftContent}
               <div id="quote" className="scroll-mt-32">
-                <LeadForm source={source} defaultInterest={defaultInterest} theme="dark" />
+                <LeadForm
+                  source={source}
+                  defaultInterest={defaultInterest}
+                  theme="card"
+                  heading={formHeading}
+                />
               </div>
             </div>
-          </div>
+          ) : (
+            // Home variant: transparent container wrapping both columns
+            <div className="bg-ink-900/55 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl p-6 md:p-8 lg:p-10">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+                {LeftContent}
+                <div id="quote" className="scroll-mt-32">
+                  <LeadForm source={source} defaultInterest={defaultInterest} theme="dark" />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>
