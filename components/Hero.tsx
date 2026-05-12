@@ -3,32 +3,30 @@ import { SITE, type Interest } from "@/lib/site";
 
 type Props = {
   saleBanner?: string;
+  /** Sale badge bottom line. Default "Garden Buildings". Use product name on product pages. */
+  badgeTagline?: string;
   headline: string;
   subheadline: string;
-  /** Optional body sentence. Use on content pages (FAQ, Reviews, etc.) where you have something extra to say. */
   bodyCopy?: string;
-  /** 3 short trust ticks. Defaults to universal ones. */
-  ticks?: string[];
   defaultInterest?: Interest;
   source: string;
   backgroundImage?: string;
 };
 
 const DEFAULT_BG = "/images/garden-rooms/1.jpg";
-const DEFAULT_TICKS = ["Save Up To 50%", "Best Price Promise", "Free Delivery & Fitting"];
 
 export default function Hero({
   saleBanner = "SALE NOW ON. Up To 50% Off Garden Buildings.",
+  badgeTagline = "Garden Buildings",
   headline,
   subheadline,
-  bodyCopy,
-  ticks = DEFAULT_TICKS,
+  bodyCopy = "Get An Unbeatable Quote Now",
   defaultInterest,
   source,
   backgroundImage = DEFAULT_BG
 }: Props) {
   const bgStyle = {
-    backgroundImage: `linear-gradient(rgba(15,23,42,0.45), rgba(15,23,42,0.65)), url(${backgroundImage})`,
+    backgroundImage: `linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.7)), url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center"
   };
@@ -40,59 +38,48 @@ export default function Hero({
       </div>
 
       <section className="bg-ink-900 text-white" style={bgStyle}>
-        <div className="max-w-container mx-auto px-4 py-10 md:py-16 lg:py-20">
-          <div className="grid lg:grid-cols-2 gap-4 lg:gap-6">
-            {/* Info card */}
-            <div className="bg-ink-900/85 backdrop-blur-md rounded-2xl p-6 md:p-8 lg:p-10 border border-white/10 shadow-2xl flex flex-col justify-center">
-              <span className="inline-flex items-center gap-2 self-start bg-brand-600 text-white text-[11px] font-extrabold tracking-[0.2em] px-3 py-1.5 rounded-full uppercase">
-                <span className="w-1.5 h-1.5 bg-white rounded-full" aria-hidden />
-                Sale Now On
-              </span>
-
-              <h1 className="mt-5 text-3xl sm:text-4xl md:text-5xl font-black leading-[1.05] text-white">
-                {headline}
-              </h1>
-              <p className="mt-3 text-base md:text-lg text-slate-200 font-medium">
-                {subheadline}
-              </p>
-
-              {bodyCopy && (
-                <p className="mt-3 text-sm md:text-base text-slate-300">{bodyCopy}</p>
-              )}
-
-              <ul className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-y-2 gap-x-4 text-sm font-semibold">
-                {ticks.map((t) => (
-                  <li key={t} className="flex items-center gap-2">
-                    <span className="text-brand-400 text-base leading-none" aria-hidden>✓</span>
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center">
-                <a
-                  href="#quote"
-                  className="bg-brand-600 hover:bg-brand-700 text-white font-bold px-6 py-3.5 rounded-lg text-center"
-                >
-                  Get A FREE Quote
-                </a>
-                <a
-                  href={SITE.phoneHref}
-                  className="flex items-center justify-center sm:justify-start gap-2 text-white font-bold text-xl md:text-2xl hover:text-brand-100"
-                  aria-label={`Call ${SITE.phone}`}
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-                    <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.58l2.2-2.21a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1Z" />
-                  </svg>
-                  {SITE.phone}
-                </a>
+        <div className="max-w-container mx-auto px-4 py-8 md:py-10 grid lg:grid-cols-2 gap-3 lg:gap-4 items-stretch">
+          {/* LEFT: green sale badge + dark info panel stacked */}
+          <div className="flex flex-col gap-3 lg:gap-4">
+            {/* Green sale badge */}
+            <div className="bg-brand-600 rounded-xl px-6 py-5 md:py-6 text-white text-center border border-brand-500 shadow-lg">
+              <div className="inline-block bg-white/25 backdrop-blur px-3 py-0.5 rounded-full text-[11px] font-extrabold tracking-[0.25em]">
+                SALE NOW ON
+              </div>
+              <div className="mt-2 text-xs font-bold uppercase tracking-[0.2em]">Up To</div>
+              <div className="text-6xl md:text-7xl font-black leading-none my-1">50%</div>
+              <div className="text-xs font-bold uppercase tracking-[0.2em]">Off</div>
+              <div className="mt-2 text-[11px] md:text-xs uppercase tracking-[0.2em] font-extrabold">
+                {badgeTagline}
               </div>
             </div>
 
-            {/* Form */}
-            <div id="quote" className="scroll-mt-32">
-              <LeadForm source={source} defaultInterest={defaultInterest} theme="dark" />
+            {/* Dark info panel */}
+            <div className="bg-ink-900/80 backdrop-blur rounded-xl p-5 md:p-6 border border-white/10 shadow-2xl flex-1 flex flex-col">
+              <h1 className="text-2xl md:text-3xl font-extrabold leading-tight">{headline}</h1>
+              <p className="mt-2 text-lg md:text-xl text-slate-200 font-semibold">{subheadline}</p>
+              {bodyCopy && <p className="mt-1.5 text-sm text-slate-300">{bodyCopy}</p>}
+
+              <a
+                href={SITE.phoneHref}
+                className="block mt-4 text-3xl md:text-4xl font-black text-white hover:text-brand-100 leading-none"
+                aria-label={`Call ${SITE.phone}`}
+              >
+                {SITE.phone}
+              </a>
+
+              <a
+                href="#quote"
+                className="mt-4 inline-block w-full text-center bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-3 rounded-md"
+              >
+                Get A FREE Quote
+              </a>
             </div>
+          </div>
+
+          {/* RIGHT: dark form */}
+          <div id="quote" className="scroll-mt-32">
+            <LeadForm source={source} defaultInterest={defaultInterest} theme="dark" />
           </div>
         </div>
       </section>
