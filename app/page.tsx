@@ -16,8 +16,8 @@ export default function HomePage() {
     <>
       <Hero
         source="home"
-        headline="Our Garden Buildings Sale Is Now On"
-        subheadline="Save Up To 50% Off Garden Buildings"
+        headline="Up To 50% Off Garden Buildings"
+        subheadline="Free delivery & installation right across Scotland."
       />
 
       <TrustBar />
