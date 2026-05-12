@@ -19,7 +19,8 @@ export default function ShedsPage() {
         source="page-sheds"
         defaultInterest="Garden Shed"
         badgeTagline="Garden Sheds"
-        subheadline="Free delivery & installation right across Scotland."
+        headline="Our Garden Sheds Sale Is Now On"
+        subheadline="Save Up To 50% Off Garden Sheds"
         backgroundImage={product.image}
       />
 

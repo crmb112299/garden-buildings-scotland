@@ -19,7 +19,8 @@ export default function GardenRoomsPage() {
         source="page-garden-rooms"
         defaultInterest="Garden Room"
         badgeTagline="Garden Rooms"
-        subheadline="Free delivery & installation right across Scotland."
+        headline="Our Garden Rooms Sale Is Now On"
+        subheadline="Save Up To 50% Off Garden Rooms"
         backgroundImage={product.image}
       />
 
