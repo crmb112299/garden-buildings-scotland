@@ -44,17 +44,17 @@ export default function Header() {
 
       {/* Main bar */}
       <div className="max-w-container mx-auto px-4 h-20 flex items-center justify-between gap-6">
-        <Link href="/" className="flex items-center gap-3 leading-tight" onClick={() => setOpen(false)}>
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-600 text-white" aria-hidden>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 11.5 12 4l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-9.5Z" />
-            </svg>
+        <Link
+          href="/"
+          className="flex flex-col leading-none"
+          onClick={() => setOpen(false)}
+          aria-label="Garden Buildings Scotland — home"
+        >
+          <span className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-[0.08em] text-brand-700">
+            Garden Buildings
           </span>
-          <span className="flex flex-col">
-            <span className="font-extrabold text-lg sm:text-xl text-ink-900 leading-none">
-              Garden Buildings <span className="text-brand-600">Scotland</span>
-            </span>
-            <span className="text-[11px] text-ink-500 mt-0.5">Sheds, Garden Rooms & More</span>
+          <span className="mt-1 text-[10px] sm:text-xs font-bold uppercase tracking-[0.45em] text-ink-700">
+            Scotland
           </span>
         </Link>
 

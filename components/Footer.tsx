@@ -6,14 +6,12 @@ export default function Footer() {
     <footer className="bg-ink-900 text-slate-200 mt-20">
       <div className="max-w-container mx-auto px-4 py-14 grid grid-cols-2 md:grid-cols-4 gap-8">
         <div className="col-span-2">
-          <Link href="/" className="inline-flex items-center gap-3">
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-brand-600 text-white" aria-hidden>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3 11.5 12 4l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-9.5Z" />
-              </svg>
+          <Link href="/" className="inline-flex flex-col leading-none">
+            <span className="text-2xl font-black uppercase tracking-[0.08em] text-brand-400">
+              Garden Buildings
             </span>
-            <span className="font-extrabold text-lg text-white">
-              Garden Buildings <span className="text-brand-500">Scotland</span>
+            <span className="mt-1 text-xs font-bold uppercase tracking-[0.45em] text-slate-300">
+              Scotland
             </span>
           </Link>
           <p className="mt-4 text-sm text-slate-400 max-w-sm leading-relaxed">
