@@ -21,7 +21,7 @@ const REVIEWS = [
     town: "Edinburgh",
     rating: 5,
     body:
-      "We ordered a garden office for working from home — fully kitted out, electrics in, insulated, the lot. Couldn't ask for better. Highly recommend."
+      "We ordered a garden office for working from home. Fully kitted out, electrics in, insulated, the lot. Couldn't ask for better. Highly recommend."
   },
   {
     name: "Sarah K.",
@@ -35,7 +35,7 @@ const REVIEWS = [
     town: "Dundee",
     rating: 5,
     body:
-      "Got three quotes — these guys were the best price by a mile AND they fit it themselves. No nonsense. Brilliant summerhouse."
+      "Got three quotes. These guys were the best price by a mile AND they fit it themselves. No nonsense. Brilliant summerhouse."
   },
   {
     name: "Karen T.",
@@ -60,7 +60,7 @@ export default function ReviewsPage() {
         source="page-reviews"
         headline="What Our Customers Say"
         subheadline="5-star rated across Scotland"
-        bodyCopy="Hundreds of happy customers from Edinburgh to Ayrshire. Read what they say about our sheds, garden rooms, summerhouses and more — then get your own free quote in under a minute."
+        bodyCopy="Hundreds of happy customers from Edinburgh to Ayrshire. Read what they say about our sheds, garden rooms, summerhouses and more, then get your own free quote in under a minute."
       />
       <TrustBar />
 
@@ -77,7 +77,7 @@ export default function ReviewsPage() {
                 <p className="mt-3 text-ink-700 leading-relaxed">“{r.body}”</p>
                 <div className="mt-4 text-sm font-semibold text-ink-900">
                   {r.name}
-                  <span className="text-ink-500 font-normal"> · {r.town}</span>
+                  <span className="text-ink-500 font-normal">, {r.town}</span>
                 </div>
               </div>
             ))}

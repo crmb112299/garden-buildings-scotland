@@ -15,7 +15,7 @@ export default function ContactPage() {
         <div className="max-w-container mx-auto px-4 py-12 md:py-16">
           <h1 className="text-4xl md:text-5xl font-extrabold">Contact Us</h1>
           <p className="mt-3 text-xl text-slate-200">
-            We&apos;re a friendly Scottish team — no call centre, no hard sell.
+            We&apos;re a friendly Scottish team. No call centre, no hard sell.
           </p>
         </div>
       </section>
@@ -42,11 +42,11 @@ export default function ContactPage() {
             <div>
               <div className="text-sm font-semibold text-brand-700 uppercase tracking-wide">Hours</div>
               <div className="mt-1 text-ink-700">
-                Mon–Fri · 9am – 5pm
+                Mon to Fri, 9am to 5pm
                 <br />
-                Sat · 10am – 2pm
+                Sat, 10am to 2pm
                 <br />
-                Sun · Closed
+                Sun, Closed
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function ContactPage() {
             <LeadForm
               source="page-contact"
               heading="Send Us A Message"
-              subheading="Quick form — we'll come back the same day."
+              subheading="Quick form. We'll come back the same day."
             />
           </div>
         </div>

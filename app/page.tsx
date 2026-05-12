@@ -16,9 +16,9 @@ export default function HomePage() {
     <>
       <Hero
         source="home"
-        headline="Garden Buildings Scotland — Sheds, Garden Rooms & More"
+        headline="Garden Buildings Scotland. Sheds, Garden Rooms and More"
         subheadline="Save Up To 50% Off Garden Buildings"
-        bodyCopy="Garden sheds, garden rooms, summerhouses, greenhouses and playhouses — supplied and installed right across Scotland. Built to last, priced to beat the competition."
+        bodyCopy="Garden sheds, garden rooms, summerhouses, greenhouses and playhouses. Supplied and installed right across Scotland. Built to last, priced to beat the competition."
       />
 
       <TrustBar />
@@ -35,14 +35,14 @@ export default function HomePage() {
           <div className="mt-5 space-y-4 text-ink-700 leading-relaxed">
             <p>
               From tucked-away tool sheds to fully insulated garden rooms used as offices, studios
-              and guest bedrooms — Garden Buildings Scotland supplies and installs the lot. Every
+              and guest bedrooms, Garden Buildings Scotland supplies and installs the lot. Every
               building is made from pressure-treated timber and built to handle the kind of weather
               the rest of the country only talks about.
             </p>
             <p>
               Whether you&apos;re after a no-frills shed, a year-round garden office, a traditional
               summerhouse for the garden or a sturdy playhouse for the kids, you&apos;re ordering
-              direct — no middleman, no showroom mark-up. That&apos;s how we keep prices up to 50%
+              direct. No middleman, no showroom mark-up. That&apos;s how we keep prices up to 50%
               under the high-street alternatives.
             </p>
             <p>
@@ -52,18 +52,18 @@ export default function HomePage() {
           </div>
 
           <h3 className="mt-10 text-2xl font-bold">What you get with every order</h3>
-          <ul className="mt-3 space-y-2 text-ink-700">
-            <li>· Pressure-treated, weatherproof timber as standard</li>
-            <li>· Free delivery and installation across Scotland</li>
-            <li>· Best Price Promise — we&apos;ll beat any like-for-like quote</li>
-            <li>· No-pressure quote process. Take your time, decide later.</li>
-            <li>· Friendly aftercare from a local Scottish team</li>
+          <ul className="mt-3 space-y-2 text-ink-700 list-disc pl-5">
+            <li>Pressure-treated, weatherproof timber as standard</li>
+            <li>Free delivery and installation across Scotland</li>
+            <li>Best Price Promise. We&apos;ll beat any like-for-like quote</li>
+            <li>No-pressure quote process. Take your time, decide later.</li>
+            <li>Friendly aftercare from a local Scottish team</li>
           </ul>
 
           <h3 className="mt-10 text-2xl font-bold">How it works</h3>
           <p className="mt-3 text-ink-700 leading-relaxed">
             Tell us what you&apos;re looking for and your postcode using the form above. We&apos;ll
-            come back with a free, no-obligation quote — usually the same day. Happy with the price?
+            come back with a free, no-obligation quote, usually the same day. Happy with the price?
             We book a delivery and install slot to suit you. That&apos;s it.
           </p>
           <p className="mt-4 text-ink-700">

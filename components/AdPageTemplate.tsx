@@ -21,8 +21,8 @@ type Props = {
 };
 
 export default function AdPageTemplate({ product, town }: Props) {
-  const place = locationPhrase(town); // "in Edinburgh" / "across Lanarkshire" / "across Scotland"
-  const headline = `${product.plural} ${place} — Save Up To 50%`;
+  const place = locationPhrase(town);
+  const headline = `${product.plural} ${place}. Save Up To 50%`;
   const subheadline = `Quality ${product.plural.toLowerCase()} supplied & installed ${place}.`;
   const source = `${product.key}-${town.slug}`;
   const interest = PRODUCT_TO_INTEREST[product.key];
@@ -36,7 +36,7 @@ export default function AdPageTemplate({ product, town }: Props) {
         subheadline={subheadline}
         bodyCopy={product.positioning}
         backgroundImage={product.image}
-        saleBanner={`SALE NOW ON · Up To 50% Off ${product.plural} ${place}`}
+        saleBanner={`SALE NOW ON. Up To 50% Off ${product.plural} ${place}`}
       />
 
       <TrustBar />
@@ -56,24 +56,24 @@ export default function AdPageTemplate({ product, town }: Props) {
               </p>
               <p>{product.positioning}</p>
               <p>
-                Tell us what you&apos;re after using the form — name, postcode, what you&apos;re
-                looking for — and we&apos;ll come back with a free, no-obligation quote, usually the
+                Tell us what you&apos;re after using the form (name, postcode, what you&apos;re
+                looking for) and we&apos;ll come back with a free, no-obligation quote, usually the
                 same day. No hard sell. No showroom mark-up.
               </p>
             </div>
 
             <h3 className="mt-10 text-2xl font-bold">Why {town.name} chooses us</h3>
-            <ul className="mt-3 space-y-2 text-ink-700">
-              <li>· Pressure-treated, weatherproof construction</li>
-              <li>· Free delivery & installation {place}</li>
-              <li>· Save up to 50% vs. high-street equivalents</li>
-              <li>· Friendly Scottish team — easy to reach, easy to deal with</li>
-              <li>· Best Price Promise on every quote</li>
+            <ul className="mt-3 space-y-2 text-ink-700 list-disc pl-5">
+              <li>Pressure-treated, weatherproof construction</li>
+              <li>Free delivery & installation {place}</li>
+              <li>Save up to 50% vs. high-street equivalents</li>
+              <li>Friendly Scottish team. Easy to reach, easy to deal with</li>
+              <li>Best Price Promise on every quote</li>
             </ul>
 
             <h3 className="mt-10 text-2xl font-bold">How to get your quote</h3>
             <p className="mt-3 text-ink-700 leading-relaxed">
-              Fill in the form and we&apos;ll be back with your price — typically within the day.
+              Fill in the form and we&apos;ll be back with your price, typically within the day.
               Prefer a chat? Call us on{" "}
               <a className="text-brand-700 font-semibold" href="tel:+441413100527">
                 01413 100527
@@ -88,7 +88,7 @@ export default function AdPageTemplate({ product, town }: Props) {
                 source={source}
                 defaultInterest={interest}
                 heading="Get Your Free Quote"
-                subheading={`${product.plural} ${place} · Save Up To 50%`}
+                subheading={`${product.plural} ${place}. Save Up To 50%`}
               />
             </div>
           </aside>

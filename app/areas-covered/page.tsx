@@ -18,7 +18,7 @@ export default function AreasCoveredPage() {
         source="page-areas-covered"
         headline="Areas We Cover Across Scotland"
         subheadline="Free delivery & installation, wherever you are"
-        bodyCopy="We supply and install garden buildings across Scotland — from Edinburgh and Glasgow to the smallest village in Ayrshire. Find your town below."
+        bodyCopy="We supply and install garden buildings across Scotland, from Edinburgh and Glasgow to the smallest village in Ayrshire. Find your town below."
       />
       <TrustBar />
 

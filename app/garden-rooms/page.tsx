@@ -8,7 +8,7 @@ import { PRODUCTS } from "@/lib/products";
 export const metadata = {
   title: "Garden Rooms & Garden Offices Scotland | Save Up To 50% | Free Quote",
   description:
-    "Fully insulated garden rooms and garden offices supplied and installed across Scotland. Use as an office, studio or guest space. Save up to 50% — get your free quote in under a minute."
+    "Fully insulated garden rooms and garden offices supplied and installed across Scotland. Use as an office, studio or guest space. Save up to 50%. Free quote in under a minute."
 };
 
 export default function GardenRoomsPage() {
@@ -35,11 +35,11 @@ export default function GardenRoomsPage() {
             <div className="mt-4 space-y-4 text-ink-700 leading-relaxed">
               <p>
                 Whether you&apos;re calling it a garden room, a garden office, a garden studio or
-                somewhere to escape the kids — they&apos;re all the same thing: a fully insulated,
+                somewhere to escape the kids, they&apos;re all the same thing: a fully insulated,
                 year-round building in your back garden, ready to use the day we leave.
               </p>
               <p>
-                Ours come with proper insulation, double glazing and electrics — usable from
+                Ours come with proper insulation, double glazing and electrics. Usable from
                 January through to December without freezing or cooking. Great as a home office, a
                 gym, a hobby room, a spare bedroom or a quiet space away from the house.
               </p>
@@ -50,17 +50,17 @@ export default function GardenRoomsPage() {
             </div>
 
             <h3 className="mt-10 text-2xl font-bold">Standard features</h3>
-            <ul className="mt-3 space-y-2 text-ink-700">
-              <li>· Fully insulated walls, floor and roof</li>
-              <li>· Double-glazed windows and doors</li>
-              <li>· Electrics installed as standard</li>
-              <li>· Free delivery and installation across Scotland</li>
-              <li>· Best Price Promise on every quote</li>
+            <ul className="mt-3 space-y-2 text-ink-700 list-disc pl-5">
+              <li>Fully insulated walls, floor and roof</li>
+              <li>Double-glazed windows and doors</li>
+              <li>Electrics installed as standard</li>
+              <li>Free delivery and installation across Scotland</li>
+              <li>Best Price Promise on every quote</li>
             </ul>
 
             <h3 className="mt-10 text-2xl font-bold">How to get your garden room quote</h3>
             <p className="mt-3 text-ink-700 leading-relaxed">
-              Drop your details into the form — name, postcode, what you&apos;re after — and we
+              Drop your details into the form (name, postcode, what you&apos;re after) and we
               come back with a free, no-obligation quote, usually within the day.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function GardenRoomsPage() {
                 source="page-garden-rooms"
                 defaultInterest="Garden Room"
                 heading="Get Your Free Garden Room Quote"
-                subheading="Save Up To 50% — takes under a minute."
+                subheading="Save Up To 50%. Takes under a minute."
               />
             </div>
           </aside>

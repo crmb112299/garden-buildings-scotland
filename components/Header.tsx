@@ -40,7 +40,7 @@ export default function Header() {
           <span className="font-extrabold text-xl text-ink-900">
             Garden Buildings <span className="text-brand-600">Scotland</span>
           </span>
-          <span className="text-xs text-ink-500">Sheds · Garden Rooms · Summerhouses</span>
+          <span className="text-xs text-ink-500">Sheds, Garden Rooms, Summerhouses</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">

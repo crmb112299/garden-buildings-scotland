@@ -11,11 +11,11 @@ const DEFAULT_ITEMS: Item[] = [
   },
   {
     title: "Built To Last",
-    body: "Pressure-treated timber and quality fittings — built for Scottish weather."
+    body: "Pressure-treated timber and quality fittings, built for Scottish weather."
   },
   {
     title: "Free Delivery & Fitting",
-    body: "Supplied and installed by our own team — no hidden extras."
+    body: "Supplied and installed by our own team. No hidden extras."
   }
 ];
 

@@ -71,7 +71,7 @@ export async function POST(request: Request) {
   }
 
   const resend = new Resend(apiKey);
-  const subject = `New lead: ${interest} — ${name} (${postcode})`;
+  const subject = `New lead: ${interest}, ${name} (${postcode})`;
   const html = `
     <h2>New lead from gardenbuildingsscotland.co.uk</h2>
     <table cellpadding="6" cellspacing="0" border="0" style="font-family:system-ui,sans-serif;font-size:14px;">

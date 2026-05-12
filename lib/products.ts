@@ -33,7 +33,7 @@ export const PRODUCTS: Record<ProductKey, Product> = {
     singular: "Garden Shed",
     plural: "Garden Sheds",
     positioning:
-      "Heavy-duty timber sheds built to last — not the flat-pack stuff that bows after a Scottish winter.",
+      "Heavy-duty timber sheds built to last. Not the flat-pack stuff that bows after a Scottish winter.",
     blurb:
       "Pressure-treated timber sheds built to last decades. Supplied and installed across Scotland.",
     image: "/images/garden-sheds/1.jpg",
@@ -46,9 +46,9 @@ export const PRODUCTS: Record<ProductKey, Product> = {
     singular: "Garden Room",
     plural: "Garden Rooms",
     positioning:
-      "Insulated, year-round garden rooms — perfect as a garden office, studio or guest space. Built without the premium price tag.",
+      "Insulated, year-round garden rooms. Perfect as a garden office, studio or guest space, built without the premium price tag.",
     blurb:
-      "Fully insulated garden rooms and garden offices — work, relax or host without leaving home.",
+      "Fully insulated garden rooms and garden offices. Work, relax or host without leaving home.",
     image: "/images/garden-rooms/1.jpg",
     gallery: gallery("garden-rooms"),
     keywords: ["garden rooms", "garden offices", "garden studios"]
@@ -72,7 +72,7 @@ export const PRODUCTS: Record<ProductKey, Product> = {
     singular: "Summerhouse",
     plural: "Summerhouses",
     positioning:
-      "Traditional and modern summerhouses — somewhere proper to enjoy the garden when the sun finally shows up.",
+      "Traditional and modern summerhouses. Somewhere proper to enjoy the garden when the sun finally shows up.",
     blurb:
       "Timber summerhouses for relaxing, entertaining and family time. Installed across Scotland.",
     image: "/images/summerhouse/1.jpg",
@@ -85,7 +85,7 @@ export const PRODUCTS: Record<ProductKey, Product> = {
     singular: "Playhouse",
     plural: "Playhouses",
     positioning:
-      "Solid timber playhouses that survive everything the kids — and Scottish weather — can throw at them.",
+      "Solid timber playhouses that survive everything the kids and Scottish weather can throw at them.",
     blurb:
       "Wooden playhouses, dens and outdoor play structures built to last well past the toddler years.",
     image: "/images/playhouses/1.jpg",

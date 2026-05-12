@@ -14,7 +14,7 @@ type Props = {
 };
 
 export default function Hero({
-  saleBanner = "SALE NOW ON · Up To 50% Off Garden Buildings",
+  saleBanner = "SALE NOW ON. Up To 50% Off Garden Buildings",
   headline,
   subheadline,
   bodyCopy,

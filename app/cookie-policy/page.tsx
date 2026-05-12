@@ -21,7 +21,7 @@ export default function CookiePolicyPage() {
 
           <h2 className="text-2xl font-bold text-ink-900 mt-8">Essential cookies</h2>
           <p>
-            These are required for the site to function — for example, to remember you&apos;ve
+            These are required for the site to function. For example, to remember you&apos;ve
             submitted a form during your session. They cannot be turned off.
           </p>
 

@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="text-2xl font-bold text-ink-900 mt-8">Why we collect it</h2>
           <p>
-            We use your details solely to respond to your enquiry — typically by phone or email —
+            We use your details solely to respond to your enquiry, typically by phone or email,
             and to send a quote. We do not sell, rent or pass your details to unrelated third
             parties.
           </p>

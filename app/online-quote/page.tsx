@@ -22,7 +22,7 @@ export default function OnlineQuotePage() {
             </p>
             <p className="mt-4 text-slate-200 max-w-xl">
               Tell us what you&apos;re looking for and your postcode. We&apos;ll come back with a
-              free, no-obligation price — usually the same day. No hard sell, no obligation.
+              free, no-obligation price, usually the same day. No hard sell, no obligation.
             </p>
             <p className="mt-4 text-slate-300">
               Or call us on{" "}

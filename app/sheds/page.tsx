@@ -18,7 +18,7 @@ export default function ShedsPage() {
       <Hero
         source="page-sheds"
         defaultInterest="Garden Shed"
-        headline="Garden Sheds — Built To Last"
+        headline="Garden Sheds Built To Last"
         subheadline="Save Up To 50% Off Garden Sheds"
         bodyCopy={product.positioning}
         backgroundImage={product.image}
@@ -39,8 +39,8 @@ export default function ShedsPage() {
               </p>
               <p>
                 Sizes run from compact tool sheds for tight courtyard gardens through to large
-                workshop-grade buildings. Whatever you&apos;re storing — bikes, the lawnmower, the
-                kit you can&apos;t fit in the garage — there&apos;s a shed for it.
+                workshop-grade buildings. Whatever you&apos;re storing (bikes, the lawnmower, the
+                kit you can&apos;t fit in the garage), there&apos;s a shed for it.
               </p>
               <p>
                 Every order is supplied AND installed by our own team. No flatpack rage, no
@@ -50,17 +50,17 @@ export default function ShedsPage() {
             </div>
 
             <h3 className="mt-10 text-2xl font-bold">Standard features</h3>
-            <ul className="mt-3 space-y-2 text-ink-700">
-              <li>· Pressure-treated, weatherproof timber</li>
-              <li>· Heavy-duty floor and roof construction</li>
-              <li>· Secure door & window options</li>
-              <li>· Free delivery and installation across Scotland</li>
-              <li>· Best Price Promise on every quote</li>
+            <ul className="mt-3 space-y-2 text-ink-700 list-disc pl-5">
+              <li>Pressure-treated, weatherproof timber</li>
+              <li>Heavy-duty floor and roof construction</li>
+              <li>Secure door & window options</li>
+              <li>Free delivery and installation across Scotland</li>
+              <li>Best Price Promise on every quote</li>
             </ul>
 
             <h3 className="mt-10 text-2xl font-bold">How to get your shed quote</h3>
             <p className="mt-3 text-ink-700 leading-relaxed">
-              Use the form to send your details — name, postcode, what you&apos;re after — and
+              Use the form to send your details (name, postcode, what you&apos;re after) and
               we&apos;ll come back with a free, no-obligation quote, usually within the day.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function ShedsPage() {
                 source="page-sheds"
                 defaultInterest="Garden Shed"
                 heading="Get Your Free Shed Quote"
-                subheading="Save Up To 50% — takes under a minute."
+                subheading="Save Up To 50%. Takes under a minute."
               />
             </div>
           </aside>

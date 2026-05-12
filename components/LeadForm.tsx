@@ -20,7 +20,7 @@ export default function LeadForm({
   defaultInterest,
   source,
   heading = "Get Your Free Quote",
-  subheading = "Save Up To 50% — takes under a minute."
+  subheading = "Save Up To 50%. Takes under a minute."
 }: Props) {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -63,7 +63,7 @@ export default function LeadForm({
   if (status === "ok") {
     return (
       <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-brand-100">
-        <div className="text-2xl font-bold text-brand-700">Thanks — we&apos;ve got your details.</div>
+        <div className="text-2xl font-bold text-brand-700">Thanks, we&apos;ve got your details.</div>
         <p className="mt-2 text-ink-700">
           One of the team will be in touch shortly with your free quote. If you&apos;d like to speak to
           us right now, call{" "}

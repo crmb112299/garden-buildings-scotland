@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Garden Buildings Scotland"
   },
   description:
-    "Garden sheds, garden rooms, summerhouses, greenhouses and playhouses supplied and installed across Scotland. Save up to 50% — get your free quote in under a minute.",
+    "Garden sheds, garden rooms, summerhouses, greenhouses and playhouses supplied and installed across Scotland. Save up to 50%. Free quote in under a minute.",
   openGraph: {
     type: "website",
     siteName: SITE.brand,
