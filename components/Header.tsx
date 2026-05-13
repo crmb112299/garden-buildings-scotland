@@ -43,17 +43,17 @@ export default function Header() {
       </div>
 
       {/* Main bar */}
-      <div className="max-w-container mx-auto px-4 h-20 flex items-center justify-between gap-6">
+      <div className="max-w-container mx-auto px-4 h-24 flex items-center justify-between gap-6">
         <Link
           href="/"
-          className="inline-flex items-baseline gap-1.5 leading-none"
+          className="inline-flex flex-col leading-none"
           onClick={() => setOpen(false)}
           aria-label="Garden Buildings Scotland — home"
         >
-          <span className="text-lg sm:text-xl md:text-[1.4rem] font-extrabold tracking-tight text-ink-900">
+          <span className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-wider text-brand-600">
             Garden Buildings
           </span>
-          <span className="text-lg sm:text-xl md:text-[1.4rem] font-extrabold tracking-tight text-brand-600">
+          <span className="mt-1.5 text-[10px] md:text-xs font-bold uppercase tracking-[0.35em] text-ink-900">
             Scotland
           </span>
         </Link>
