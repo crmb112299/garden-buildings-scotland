@@ -6,11 +6,11 @@ export default function Footer() {
     <footer className="bg-ink-900 text-slate-200 mt-20">
       <div className="max-w-container mx-auto px-4 py-14 grid grid-cols-2 md:grid-cols-4 gap-8">
         <div className="col-span-2">
-          <Link href="/" className="inline-flex flex-col leading-none">
-            <span className="text-2xl font-black uppercase tracking-[0.08em] text-brand-400">
+          <Link href="/" className="inline-flex items-baseline gap-1.5 leading-none">
+            <span className="text-xl font-extrabold tracking-tight text-white">
               Garden Buildings
             </span>
-            <span className="mt-1 text-xs font-bold uppercase tracking-[0.45em] text-slate-300">
+            <span className="text-xl font-extrabold tracking-tight text-brand-400">
               Scotland
             </span>
           </Link>
